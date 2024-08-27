@@ -1,4 +1,4 @@
-const gameBoard = document.querySelector("gameBoard");
+const gameBoard = document.querySelector("#gameBoard");
 const ctx = gameBoard.getContext("2d");
 const scoreText = document.querySelector("#scoreText");
 const resetBtn = document.querySelector("resetBtn");
@@ -27,11 +27,19 @@ window.addEventListener("keydown", changeDirectioin);
 resetBtn.addEventListener("click", resetGame);
 
 gameStart();
+createFood();
 
 function gameStart(){};
 function nextTick(){};
 function clearBoard(){};
-function createFood(){};
+function createFood(){
+    function randomFood(min, max){
+        const randNum = Math.round((Math.random() * (max - min)+ min) / unitSize) * unitSize;
+        return randNum;
+    }
+    foodX = randomFood(0, gameWidth - unitSize);
+    console.log(foodX);
+};
 function drawFood(){};
 function moveSnake(){};
 function drawSnake(){};
