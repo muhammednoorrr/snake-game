@@ -28,6 +28,7 @@ resetBtn.addEventListener("click", resetGame);
 
 gameStart();
 createFood();
+drawFood();
 
 function gameStart(){};
 function nextTick(){};
@@ -38,9 +39,12 @@ function createFood(){
         return randNum;
     }
     foodX = randomFood(0, gameWidth - unitSize);
-    console.log(foodX);
+    foodY = randomFood(0, gameWidth - unitSize);
 };
-function drawFood(){};
+function drawFood(){
+    ctx.fillStyle = foodColor;
+    ctx.fillReact(foodX, foodY, unitSize, unitSize);
+};
 function moveSnake(){};
 function drawSnake(){};
 function changeDirectioin(){};
