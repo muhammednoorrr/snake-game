@@ -32,6 +32,7 @@ function gameStart(){};
 function nextTick(){};
 function clearBoard(){};
 function createFood(){};
+function drawFood(){};
 function moveSnake(){};
 function drawSnake(){};
 function changeDirectioin(){};
