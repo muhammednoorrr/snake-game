@@ -27,13 +27,15 @@ window.addEventListener("keydown", changeDirectioin);
 resetBtn.addEventListener("click", resetGame);
 
 gameStart();
+createFood();
+drawFood();
 
 function gameStart(){
-    running = true;
-    scoreText.textContext = score;
-    createFood();
-    drawFood();
-    nextTick();
+    // running = true;
+    // scoreText.textContext = score;
+    // createFood();
+    // drawFood();
+    // nextTick();
 };
 function nextTick(){};
 function clearBoard(){};
@@ -47,7 +49,7 @@ function createFood(){
 };
 function drawFood(){
     ctx.fillStyle = foodColor;
-    ctx.fillReact(foodX, foodY, unitSize, unitSize);
+    ctx.fillRect(foodX, foodY, unitSize, unitSize);
 };
 function moveSnake(){};
 function drawSnake(){};
