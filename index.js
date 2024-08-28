@@ -27,8 +27,6 @@ window.addEventListener("keydown", changeDirectioin);
 resetBtn.addEventListener("click", resetGame);
 
 gameStart();
-createFood();
-drawFood();
 
 function gameStart(){
     running = true;
