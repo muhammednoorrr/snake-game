@@ -35,7 +35,9 @@ function gameStart(){
     drawFood();
     nextTick();
 };
-function nextTick(){};
+function nextTick(){
+    
+};
 function clearBoard(){};
 function createFood(){
     function randomFood(min, max){
