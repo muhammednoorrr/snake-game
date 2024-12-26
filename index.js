@@ -88,7 +88,9 @@ function drawSnake(){
         ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
     })
 };
-function changeDirectioin(){};
+function changeDirectioin(event){
+//20:15
+};
 function checkGameOver(){};
 function displayGameOver(){};
 function resetGame(){};
