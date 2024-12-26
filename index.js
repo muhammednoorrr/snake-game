@@ -37,14 +37,14 @@ function gameStart(){
 };
 function nextTick(){
     if(running){
-        setTimeouut(()=>{
+        setTimeout(()=>{
             clearBoard();
             drawFood();
             moveSnake();
             drawSnake();
             checkGameOver();
             nextTick();
-        }, 75)
+        }, 125)
     }
     else{
         displayGameOver();
