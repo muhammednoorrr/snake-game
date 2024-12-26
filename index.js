@@ -52,7 +52,7 @@ function nextTick(){
 };
 function clearBoard(){
     ctx.fillStyle = boardBackground;
-    ctx.fillRext(0, 0, gameWidth, gameHeight);
+    ctx.fillRect(0, 0, gameWidth, gameHeight);
 };
 function createFood(){
     function randomFood(min, max){
@@ -68,7 +68,12 @@ function drawFood(){
 };
 function moveSnake(){};
 function drawSnake(){
-    
+    ctx.fillStyle = snakeColor;
+    ctx.strokeStyle = snakeBorder;
+    snake.forEach(snakePart => {
+        ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
+        ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
+    })
 };
 function changeDirectioin(){};
 function checkGameOver(){};
