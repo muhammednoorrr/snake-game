@@ -30,7 +30,7 @@ gameStart();
 
 function gameStart(){
     running = true;
-    scoreText.textContext = score;
+    scoreText.textContent = score;
     createFood();
     drawFood();
     nextTick();
