@@ -89,7 +89,35 @@ function drawSnake(){
     })
 };
 function changeDirectioin(event){
-//20:15
+    const keyPressed = event.keyCode;
+    const LEFT = 37;
+    const UP = 38;
+    const RIGHT = 39;
+    const DOWN = 40;
+
+    const goingUP = (yVelocity == -unitSize);
+    const goingDown = (yVelocity == unitSize);
+    const goingRight = (xVelocity == unitSize);
+    const goingLeft = (xVelocity == -unitSize);
+
+    switch(true){
+        case(keyPressed == LEFT && !goingRight):
+           xVelocity = -unitSize;
+           yVelocity = 0;
+           break;
+        case(keyPressed == UP && !goingDown):
+           xVelocity = 0;
+           yVelocity = -unitSize;
+           break;
+        case(keyPressed == RIGHT && !goingLeft):
+           xVelocity = unitSize;
+           yVelocity = 0;
+           break;
+        case(keyPressed == Down && !goingUp):
+           xVelocity = 0;
+           yVelocity = unitSize;
+           break;
+    }
 };
 function checkGameOver(){};
 function displayGameOver(){};
