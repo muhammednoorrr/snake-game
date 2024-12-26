@@ -122,3 +122,4 @@ function changeDirectioin(event){
 function checkGameOver(){};
 function displayGameOver(){};
 function resetGame(){};
+//24:13
