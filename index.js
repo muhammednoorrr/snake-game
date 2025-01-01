@@ -95,7 +95,7 @@ function changeDirectioin(event){
     const RIGHT = 39;
     const DOWN = 40;
 
-    const goingUP = (yVelocity == -unitSize);
+    const goingUp = (yVelocity == -unitSize);
     const goingDown = (yVelocity == unitSize);
     const goingRight = (xVelocity == unitSize);
     const goingLeft = (xVelocity == -unitSize);
@@ -113,7 +113,7 @@ function changeDirectioin(event){
            xVelocity = unitSize;
            yVelocity = 0;
            break;
-        case(keyPressed == Down && !goingUp):
+        case(keyPressed == DOWN && !goingUp):
            xVelocity = 0;
            yVelocity = unitSize;
            break;
