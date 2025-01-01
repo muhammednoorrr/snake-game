@@ -119,7 +119,27 @@ function changeDirectioin(event){
            break;
     }
 };
-function checkGameOver(){};
+function checkGameOver(){
+    switch(true){
+        case (snake[0].x < 0):
+            running = false;
+            break;
+        case (snake[0].x >= gameWidth):
+            running = false;
+            break;
+        case (snake[0].y < 0):
+            running = false;
+            break;
+        case (snake[0].y >= gameHeight):
+             running = false;
+            break;
+    }
+    for(let i= 1; i < snake.length; i+=1){
+        if(snake[i].x == snake[0].x && snake[i].y == snake[0].y ){
+            running = false;
+        }
+    }
+};
 function displayGameOver(){};
 function resetGame(){};
-//24:13
+//24:22
